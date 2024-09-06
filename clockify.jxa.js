@@ -155,7 +155,7 @@ function run(argv) {
 
       if (refresh || !res) {
         res =
-          app.doShellScript(`curl --location --request GET '${CLOCKIFY_BASE_URL}/workspaces/${CLOCKIFY_WORKSPACE_ID}/clients' \
+          app.doShellScript(`curl --location --request GET '${CLOCKIFY_BASE_URL}/workspaces/${CLOCKIFY_WORKSPACE_ID}/clients?page-size=100' \
     --header 'Cache-Control: no-cache' \
     --header 'Accept: application/json' \
     --header 'X-Api-Key: ${CLOCKIFY_API_KEY}'`);
